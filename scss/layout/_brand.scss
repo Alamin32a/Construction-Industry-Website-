@@ -1,0 +1,17 @@
+@use '../utils' as *;
+
+/*=============================
+        26. Brand
+===============================*/
+.brand {
+    &__item {
+        min-height: 43px;
+        @include flexbox();
+        align-items: center;
+        justify-content: center;
+        & img {
+            cursor: pointer;
+        }
+    }
+}
+

@@ -1,0 +1,98 @@
+@use '../utils' as *;
+
+/*=============================
+	00. Section Title
+===============================*/
+.section__title {
+    position: relative;
+    padding-top: 45px;
+    @media #{$lg} {
+        padding-top: 30px;
+    }
+    &-two {
+        padding-top: 0;
+    }
+    & .title {
+        font-size: 48px;
+        line-height: 1.2;
+        margin: 0 0;
+        text-transform: uppercase;
+        font-weight: 600;
+        @media #{$xl} {
+            font-size: 45px;
+        }
+        @media #{$lg} {
+            font-size: 42px;
+        }
+        @media #{$xs} {
+            font-size: 36px;
+        }
+        @media #{$sm} {
+            font-size: 36px;
+        }
+    }
+    & .number {
+        font-size: 160px;
+        font-weight: 600;
+        line-height: .75;
+        margin-bottom: 0;
+        color: var(--tg-color-gray-1);
+        z-index: -1;
+        position: absolute;
+        left: -60px;
+        top: 0;
+        @media #{$xl} {
+            left: -30px;
+        }
+        @media #{$lg} {
+            font-size: 115px;
+            left: -20px;
+        }
+        @media #{$xs} {
+            font-size: 100px;
+            left: 0;
+        }
+    }
+    & p {
+        margin-bottom: 0;
+        margin-top: 15px;
+        & br {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+    }
+    &-three {
+        padding-top: 0;
+        & .sub-title {
+            display: block;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--tg-theme-primary);
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+    }
+    &.white-title {
+        & .title {
+            color: var(--tg-color-white-default);
+        }
+        & .number {
+            color: var(--tg-heading-color);
+        }
+        & p {
+            color: #ACAACC;
+        }
+    }
+    & .desc {
+        margin: 10px 0 0;
+    }
+}
+
+.section__title.mb-70,
+.section__title.mb-60 {
+    @media #{$md} {
+        margin-bottom: 40px;
+    }
+}

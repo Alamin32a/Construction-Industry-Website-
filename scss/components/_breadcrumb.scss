@@ -1,0 +1,81 @@
+@use '../utils' as *;
+
+/*=========================
+      Breadcrumb
+===========================*/
+.breadcrumb {
+    &__bg {
+        background-size: cover;
+        background-position: center;
+        padding: 120px 0;
+        @media #{$lg} {
+            padding: 100px 0;
+        }
+        @media #{$xs} {
+            padding: 80px 0;
+        }
+    }
+    &__content {
+        display: inline-block;
+        border: 1px solid #FFF;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(18px);
+        padding: 55px 90px 55px 60px;
+        @media #{$lg} {
+            padding: 40px 70px 40px 40px;
+        }
+        @media #{$xs} {
+            padding: 25px;
+        }
+        @media #{$sm} {
+            padding: 30px 35px;
+        }
+        & .title {
+            margin-bottom: 12px;
+            font-size: 60px;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 1;
+            @media #{$xl} {
+                font-size: 56px;
+            }
+            @media #{$lg} {
+                font-size: 52px;
+            }
+            @media #{$md} {
+                font-size: 48px;
+            }
+            @media #{$xs} {
+                font-size: 42px;
+            }
+        }
+        & .breadcrumb {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            gap: 6px;
+            & > * {
+                font-size: 16px;
+                color: var(--tg-theme-primary);
+                font-weight: 600;
+                text-transform: uppercase;
+                & a {
+                    color: var(--tg-body-color);
+                    &:hover {
+                        color: var(--tg-theme-primary);
+                    }
+                }
+            }
+            & .breadcrumb-separator {
+                line-height: 1;
+                font-size: 16px;
+                font-weight: 700;
+                color: var(--tg-body-color);
+            }
+        }
+    }
+}

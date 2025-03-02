@@ -1,0 +1,21 @@
+@use '../utils' as *;
+
+/*=============================
+        16. Community
+===============================*/
+.community {
+    &__img {
+        @media #{$md} {
+            margin-bottom: 50px;
+        }
+    }
+    &__content {
+        & p {
+            margin-bottom: 50px;
+        }
+        & .about__list-box-wrap {
+            margin-bottom: 50px;
+        }
+    }
+}
+

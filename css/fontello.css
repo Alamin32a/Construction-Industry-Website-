@@ -1,0 +1,342 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('../fonts/fontello.eot?73065033');
+    src: url('../fonts/fontello.eot?73065033#iefix') format('embedded-opentype'), url('../fonts/fontello.woff2?73065033') format('woff2'), url('../fonts/fontello.woff?73065033') format('woff'), url('../fonts/fontello.ttf?73065033') format('truetype'), url('../fonts/fontello.svg?73065033#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?73065033#fontello') format('svg');
+  }
+}
+*/
+
+[class^="renova-"]:before,
+[class*=" renova-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+    display: inline-block;
+    text-decoration: inherit;
+    width: auto;
+    text-align: center;
+    margin: 0;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+}
+
+.renova-up-arrow:before {
+    content: '\e800';
+}
+
+/* '' */
+
+.renova-thumb:before {
+    content: '\e801';
+}
+
+/* '' */
+
+.renova-group:before {
+    content: '\e802';
+}
+
+/* '' */
+
+.renova-thumb-screw:before {
+    content: '\e803';
+}
+
+/* '' */
+
+.renova-tractor:before {
+    content: '\e804';
+}
+
+/* '' */
+
+.renova-user-rating:before {
+    content: '\e805';
+}
+
+/* '' */
+
+.renova-brick:before {
+    content: '\e806';
+}
+
+/* '' */
+
+.renova-rocket:before {
+    content: '\e807';
+}
+
+/* '' */
+
+.renova-flag:before {
+    content: '\e808';
+}
+
+/* '' */
+
+.renova-book:before {
+    content: '\e809';
+}
+
+/* '' */
+
+.renova-top-right:before {
+    content: '\e80a';
+}
+
+/* '' */
+
+.renova-right-arrow:before {
+    content: '\e80b';
+}
+
+/* '' */
+
+.renova-left-arrow:before {
+    content: '\e80c';
+}
+
+/* '' */
+
+.renova-cart:before {
+    content: '\e80d';
+}
+
+/* '' */
+
+.renova-plus:before {
+    content: '\e80f';
+}
+
+/* '' */
+
+.renova-search:before {
+    content: '\e810';
+}
+
+/* '' */
+
+.renova-envelope:before {
+    content: '\e811';
+}
+
+/* '' */
+
+.renova-down-arrow:before {
+    content: '\e812';
+}
+
+/* '' */
+
+.renova-marker:before {
+    content: '\e813';
+}
+
+/* '' */
+
+.renova-phone:before {
+    content: '\e814';
+}
+
+/* '' */
+
+.renova-play:before {
+    content: '\e815';
+}
+
+/* '' */
+
+.renova-quote:before {
+    content: '\e816';
+}
+
+/* '' */
+
+.renova-light:before {
+    content: '\e817';
+}
+
+/* '' */
+
+.renova-idea:before {
+    content: '\e818';
+}
+
+/* '' */
+
+.renova-bright:before {
+    content: '\e819';
+}
+
+/* '' */
+
+.renova-right-arrow-2:before {
+    content: '\e81a';
+}
+
+/* '' */
+
+.renova-stone:before {
+    content: '\e81b';
+}
+
+/* '' */
+
+.renova-badge:before {
+    content: '\e81c';
+}
+
+/* '' */
+
+.renova-play-2:before {
+    content: '\e81d';
+}
+
+/* '' */
+
+.renova-unity:before {
+    content: '\e81e';
+}
+
+/* '' */
+
+.renova-long-left:before {
+    content: '\e81f';
+}
+
+/* '' */
+
+.renova-rocket-2:before {
+    content: '\e820';
+}
+
+/* '' */
+
+.renova-idea-2:before {
+    content: '\e821';
+}
+
+/* '' */
+
+.renova-construction:before {
+    content: '\e822';
+}
+
+/* '' */
+
+.renova-user-rating-2:before {
+    content: '\e824';
+}
+
+/* '' */
+
+.renova-note:before {
+    content: '\e825';
+}
+
+/* '' */
+
+.renova-long-right:before {
+    content: '\e826';
+}
+
+/* '' */
+
+.renova-glove:before {
+    content: '\e828';
+}
+
+/* '' */
+
+.renova-rank:before {
+    content: '\e829';
+}
+
+/* '' */
+
+.renova-feedback:before {
+    content: '\e82a';
+}
+
+/* '' */
+
+.renova-happy:before {
+    content: '\e82b';
+}
+
+/* '' */
+
+.renova-foot:before {
+    content: '\e82c';
+}
+
+/* '' */
+
+.renova-search-2:before {
+    content: '\e82e';
+}
+
+/* '' */
+
+.renova-clock:before {
+    content: '\e82f';
+}
+
+/* '' */
+
+.renova-quote-2:before {
+    content: '\e830';
+}
+
+/* '' */
+
+.renova-quote-3:before {
+    content: '\e831';
+}
+
+/* '' */
+
+.renova-headphone:before {
+    content: '\e832';
+}
+
+/* '' */
+
+.renova-map:before {
+    content: '\e833';
+}
+
+/* '' */
+
+.renova-envelope-open:before {
+    content: '\e834';
+}
+
+/* '' */
+
+.renova-working-time:before {
+    content: '\e835';
+}
+
+/* '' */
+
+.renova-progress:before {
+    content: '\e836';
+}
+
+/* '' */

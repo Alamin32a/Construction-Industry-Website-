@@ -1,0 +1,130 @@
+@use '../utils' as *;
+
+/*=============================
+	  OffCanvas
+===============================*/
+.offCanvas-toggle {
+    position: relative;
+    margin-right: 40px;
+    padding-right: 40px;
+    @media #{$md} {
+        margin-right: 25px;
+        padding-right: 25px;
+    }
+    @media #{$xs} {
+        display: none;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 60px;
+        background: var(--tg-border-1);
+    }
+    & .menu-tigger {
+        color: var(--tg-heading-color);
+        &:hover {
+            color: var(--tg-theme-primary);
+        }
+    }
+    &-two {
+        margin-right: 0;
+        padding-right: 0;
+        padding-left: 40px;
+        &::before {
+            right: auto;
+            left: 0;
+            height: 104px;
+        }
+    }
+}
+
+.offCanvas {
+    &__info {
+        background: var(--tg-color-white-default) none repeat scroll 0 0;
+        height: 100%;
+        padding: 30px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        -moz-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        -ms-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        -o-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        width: 340px;
+        z-index: 999;
+        overflow-y: scroll;
+        @include transform(translateX(100%));
+        &.active {
+            @include transform(translateX(0));
+        }
+        &::-webkit-scrollbar {
+            width: 0px;
+        }
+    }
+    &__close-icon {
+        margin-top: -16px;
+        text-align: right;
+        & button {
+            background: transparent;
+            border: 0 none;
+            color: var(--tg-theme-primary);
+            cursor: pointer;
+            font-size: 20px;
+            padding: 0;
+        }
+    }
+    &__logo {
+        & img {
+            max-height: 34px;
+        }
+    }
+    &__side-info {
+        border-top: 1px solid var(--tg-theme-primary);
+        padding-top: 25px;
+        & .contact-list {
+            & h4 {
+                color: var(--tg-heading-color);
+                font-weight: 700;
+                font-size: 18px;
+            }
+            & p {
+                color: var(--tg-body-color);
+                margin: 0;
+                margin-bottom: 2px;
+                line-height: 26px;
+            }
+        }
+    }
+    &__social-icon {
+        & a {
+            color: var(--tg-theme-primary);
+            display: inline-block;
+            margin-right: 20px;
+            text-align: center;
+            &:hover {
+                color: var(--tg-theme-secondary);
+            }
+        }
+    }
+    &__overly {
+        position: fixed;
+        background: #000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        @include transition(.3s);
+        &.active {
+            opacity: .7;
+            visibility: visible;
+        }
+    }
+}

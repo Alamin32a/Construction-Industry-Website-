@@ -1,0 +1,285 @@
+@use '../utils' as *;
+
+/*=============================
+        19. Office
+===============================*/
+.office {
+    &__area {
+        background: var(--tg-color-gray-2);
+        padding: 120px 0 95px;
+        @media #{$xs} {
+            padding: 100px 0 75px;
+        }
+    }
+    &__item {
+        border: 1px solid var(--tg-border-2);
+        background: var(--tg-color-white-default);
+        padding: 45px 50px 50px;
+        margin-bottom: 25px;
+        @include transition(.3s);
+        @media #{$lg} {
+            padding: 35px 35px 40px;
+        }
+        @media #{$xs} {
+            padding: 35px 30px 40px;
+        }
+        @media #{$sm} {
+            padding: 35px 40px 40px;
+        }
+        &:hover {
+            border-color: var(--tg-theme-primary);
+        }
+        & .title {
+            margin-bottom: 12px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        & p {
+            margin-bottom: 15px;
+        }
+        & span {
+            @include flexbox();
+            align-items: center;
+            color: var(--tg-heading-color);
+            gap: 5px;
+            margin-bottom: 30px;
+            & a {
+                font-weight: 600;
+                text-decoration: underline;
+                &:hover {
+                    color: var(--tg-theme-secondary);
+                }
+            }
+        }
+        & .btn {
+            color: var(--tg-theme-secondary);
+            gap: 10px;
+            padding: 14px 23px 13px;
+            &:hover {
+                color: var(--tg-color-white-default);
+            }
+        }
+        &-two {
+            background: var(--tg-color-white-default);
+            padding: 30px;
+            @include border-radius(10px);
+            @media #{$lg} {
+                padding: 20px;
+            }
+            @media #{$md} {
+                padding: 30px;
+            }
+            @media #{$xs} {
+                padding: 20px;
+            }
+            @media #{$sm} {
+                padding: 25px;
+            }
+            &-top {
+                @include flexbox();
+                gap: 30px;
+                margin-bottom: 26px;
+                @media #{$lg} {
+                    gap: 15px;
+                }
+                @media #{$md} {
+                    gap: 25px;
+                }
+                @media #{$xs} {
+                    gap: 20px;
+                    flex-wrap: wrap;
+                }
+                @media #{$sm} {
+                    gap: 20px;
+                    flex-wrap: nowrap;
+                }
+            }
+        }
+    }
+    &__thumb-two {
+        width: 200px;
+        flex: 0 0 auto;
+        @media #{$lg} {
+            width: 150px;
+        }
+        @media #{$md} {
+            width: 200px;
+        }
+        @media #{$xs} {
+            width: 100%;
+        }
+        @media #{$sm} {
+            width: 200px;
+        }
+        & img {
+            width: 100%;
+            height: 195px;
+            object-fit: cover;
+            @include border-radius(5px);
+        }
+    }
+    &__content {
+        &-two {
+            @include flexbox();
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            & .title {
+                margin-bottom: 18px;
+                font-size: 24px;
+                font-weight: 500;
+                @media #{$lg} {
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                }
+            }
+            & p {
+                margin-bottom: 22px;
+                @media #{$lg} {
+                    margin-bottom: 15px;
+                }
+            }
+            & .btn {
+                gap: 10px;
+                padding: 14px 19px;
+            }
+        }
+    }
+    &__info-list {
+        & .list-wrap {
+            & li {
+                @include flexbox();
+                align-items: center;
+                gap: 20px;
+                border-bottom: 1px solid #E9E9E9;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                @media #{$lg} {
+                    margin-bottom: 16px;
+                    padding-bottom: 16px;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
+                & .icon {
+                    width: 45px;
+                    height: 45px;
+                    @include flexbox();
+                    align-items: center;
+                    justify-content: center;
+                    background: #EEEEEE;
+                    flex: 0 0 auto;
+                    color: var(--tg-heading-color);
+                    font-size: 18px;
+                    line-height: 0;
+                    @include border-radius(5px);
+                }
+                & .content {
+                    & .title {
+                        margin-bottom: 0;
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    &__nav-wrap {
+        @media #{$md} {
+            margin-bottom: 30px;
+        }
+        & .nav {
+            &-tabs {
+                border-bottom: none;
+                flex-direction: column;
+            }
+            &-item {
+                margin-bottom: 25px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            &-link {
+                border: none;
+                background: var(--tg-color-white-default);
+                @include flexbox();
+                align-items: center;
+                padding: 30px;
+                @include border-radius(10px);
+                width: 100%;
+                gap: 30px;
+                @media #{$lg} {
+                    padding: 24px 20px;
+                    gap: 15px;
+                }
+                @media #{$md} {
+                    gap: 25px;
+                    padding: 30px;
+                }
+                @media #{$xs} {
+                    gap: 20px;
+                    padding: 20px;
+                    flex-wrap: wrap;
+                }
+                @media #{$sm} {
+                    padding: 25px;
+                    flex-wrap: nowrap;
+                }
+                & img {
+                    width: 200px;
+                    height: 90px;
+                    object-fit: cover;
+                    @include border-radius(5px);
+                    @media #{$lg} {
+                        width: 140px;
+                    }
+                    @media #{$md} {
+                        width: 200px;
+                    }
+                    @media #{$xs} {
+                        width: 100%;
+                    }
+                    @media #{$sm} {
+                        width: 150px;
+                    }
+                }
+                & span {
+                    @include flexbox();
+                    align-items: center;
+                    flex-grow: 1;
+                    justify-content: space-between;
+                    gap: 20px;
+                    font-size: 24px;
+                    color: var(--tg-heading-color);
+                    @media #{$lg} {
+                        font-size: 24px;
+                        gap: 15px;
+                    }
+                    & i {
+                        width: 50px;
+                        height: 50px;
+                        @include flexbox();
+                        align-items: center;
+                        justify-content: center;
+                        background: var(--tg-theme-secondary);
+                        color: var(--tg-color-white-default);
+                        @include border-radius(50%);
+                        font-size: 16px;
+                        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+                        flex: 0 0 auto;
+                    }
+                }
+                &.active {
+                    & span {
+                        & i {
+                            background: var(--tg-theme-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

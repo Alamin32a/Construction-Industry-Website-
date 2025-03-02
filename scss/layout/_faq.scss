@@ -1,0 +1,322 @@
+@use '../utils' as *;
+
+/*=============================
+        12. Faq
+===============================*/
+.faq {
+    &__img {
+        position: relative;
+        @media #{$md} {
+            margin-bottom: 50px;
+        }
+        & img {
+            min-height: 492px;
+            object-fit: cover;
+            width: 100%;
+            @media #{$xs} {
+                min-height: 350px;
+            }
+        }
+        &-content {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: rgba(23 23 23 / 90%);
+            padding: 44px 50px;
+            @media #{$lg} {
+                padding: 30px 30px;
+            }
+            @media #{$xs} {
+                padding: 25px 25px;
+            }
+            & .title {
+                color: var(--tg-color-white-default);
+                font-size: 24px;
+                font-weight: 500;
+                margin-bottom: 0;
+                & br {
+                    @media #{$xs} {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    &__content {
+        margin-right: 10px;
+        @media #{$lg} {
+            margin-right: 0;
+        }
+    }
+    &__wrap {
+        margin-left: 50px;
+        @media #{$lg} {
+            margin-left: 0;
+        }
+        & .accordion {
+            &-item {
+                border: none;
+                border-bottom: 1px solid var(--tg-color-gray-1);
+                &:first-of-type {
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                    & .accordion-button {
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                    }
+                }
+                &:last-of-type {
+                    border-bottom-right-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+            &-button {
+                font-size: 24px;
+                font-weight: 500;
+                padding: 18px 25px 18px 0;
+                color: var(--tg-heading-color);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 4px;
+                    background: var(--tg-color-gray-1);
+                    opacity: 0;
+                }
+                &::after {
+                    content: "\f067";
+                    background-image: none;
+                    width: auto;
+                    height: auto;
+                    font-family: var(--tg-icon-font-family);
+                    font-size: 14px;
+                    position: absolute;
+                    font-weight: 700;
+                    right: 0;
+                    top: 25px;
+                    color: var(--tg-heading-color);
+                }
+                &:not(.collapsed) {
+                    color: var(--tg-heading-color);
+                    background-color: transparent;
+                    box-shadow: none;
+                    &::before {
+                        opacity: 1;
+                    }
+                    &::after {
+                        content: "\f068";
+                        background-image: none;
+                        transform: rotate(0);
+                    }
+                }
+                &:focus {
+                    border-color: transparent;
+                    box-shadow: none;
+                }
+            }
+            &-body {
+                padding: 22px 0 35px;
+                & p {
+                    font-size: 16px;
+                    margin-bottom: 28px;
+                }
+                & span {
+                    display: block;
+                    line-height: 1;
+                    font-size: 50px;
+                    font-weight: 300;
+                    color: var(--tg-theme-primary);
+                    @media #{$lg} {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+        &-two {
+            & .accordion {
+                &-item {
+                    border: none;
+                    margin-bottom: 20px;
+                    &:last-child {
+                        margin-bottom: 0;
+                        & .accordion-body {
+                            padding: 25px 0 0;
+                        }
+                    }
+                    &:first-of-type {
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                        & .accordion-button {
+                            border-top-left-radius: 0;
+                            border-top-right-radius: 0;
+                        }
+                    }
+                    &:last-of-type {
+                        border-bottom-right-radius: 0;
+                        border-bottom-left-radius: 0;
+                    }
+                }
+                &-button {
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding: 19px 60px 19px 25px;
+                    color: var(--tg-heading-color);
+                    background: var(--tg-color-gray-2);
+                    position: relative;
+                    &::after {
+                        content: "\e800";
+                        background-image: none;
+                        width: 40px;
+                        height: 40px;
+                        font-family: "fontello";
+                        font-size: 12px;
+                        position: absolute;
+                        font-weight: 400;
+                        right: 10px;
+                        top: 10px;
+                        color: var(--tg-color-white-default);
+                        transform: rotate(180deg);
+                        @include flexbox();
+                        align-items: center;
+                        justify-content: center;
+                        background: var(--tg-theme-primary);
+                    }
+                    &:not(.collapsed) {
+                        color: var(--tg-heading-color);
+                        background-color: var(--tg-color-gray-2);
+                        box-shadow: none;
+                        &::after {
+                            background-image: none;
+                            transform: rotate(0);
+                        }
+                    }
+                    &:focus {
+                        border-color: transparent;
+                        box-shadow: none;
+                    }
+                }
+                &-body {
+                    padding: 25px 0 40px;
+                    & img {
+                        width: 194px;
+                        height: 90px;
+                        object-fit: cover;
+                        float: left;
+                        margin-right: 30px;
+                        @media #{$lg} {
+                            margin-right: 20px;
+                        }
+                    }
+                    & p {
+                        font-size: 16px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    &__sidebar {
+        @media #{$md} {
+            margin-top: 100px;
+        }
+    }
+}
+
+
+.sidebar {
+    &__search {
+        background: var(--tg-color-gray-2);
+        padding: 40px 40px;
+        margin-bottom: 40px;
+        @media #{$lg} {
+            padding: 30px 20px;
+        }
+        &-form {
+            position: relative;
+            & input {
+                width: 100%;
+                border: none;
+                background: var(--tg-color-white-default);
+                padding: 15px 65px 15px 20px;
+                line-height: 1;
+                font-size: 16px;
+                font-weight: 400;
+                color: var(--tg-theme-secondary);
+                &::placeholder {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: var(--tg-body-color);
+                }
+            }
+            & button {
+                position: absolute;
+                border: none;
+                right: 0;
+                top: 0;
+                width: 55px;
+                height: 55px;
+                color: var(--tg-color-white-default);
+                background: var(--tg-theme-primary);
+                line-height: 0;
+                font-size: 18px;
+                &:hover {
+                    background: var(--tg-theme-secondary);
+                }
+            }
+        }
+    }
+    &__discount {
+        background: var(--tg-theme-secondary);
+        padding: 70px 40px 40px;
+        text-align: center;
+        @media #{$lg} {
+            padding: 50px 20px 30px;
+        }
+        & .title {
+            margin-bottom: 30px;
+            color: var(--tg-color-white-default);
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+    }
+    &__logo {
+        text-align: center;
+        margin-bottom: 35px;
+        & img {
+            max-height: 45px;
+        }
+    }
+    &__content {
+        background: var(--tg-color-white-default);
+        padding: 35px 40px 0;
+        @media #{$lg} {
+            padding: 25px 20px 0;
+        }
+        & .title-two {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        & span {
+            display: block;
+            font-size: 14px;
+            color: var(--tg-body-color);
+            margin-bottom: 22px;
+            & strong {
+                color: var(--tg-theme-primary);
+                font-weight: 600;
+            }
+        }
+        & .btn {
+            padding: 17px 30px 16px;
+            &:hover {
+                background: var(--tg-theme-secondary);
+                border-color: var(--tg-theme-secondary);
+            }
+        }
+    }
+}

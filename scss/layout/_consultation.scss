@@ -1,0 +1,120 @@
+@use '../utils' as *;
+
+/*=============================
+        21. Consultation
+===============================*/
+.consultation {
+    &__img {
+        height: 100%;
+        @media #{$md} {
+            height: auto;
+            margin-bottom: 40px;
+        }
+        & img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            @media #{$md} {
+                height: 500px;
+            }
+            @media #{$xs} {
+                height: auto;
+                min-height: 250px;
+            }
+        }
+    }
+    &__form {
+        &-wrap {
+            background: var(--tg-color-white-default);
+            padding: 35px 40px 40px;
+            border: 30px solid var(--tg-theme-secondary);
+            @media #{$lg} {
+                padding: 25px 25px 30px;
+                border: 20px solid var(--tg-theme-secondary);
+            }
+            @media #{$md} {
+                padding: 35px 40px 40px;
+                border: 30px solid var(--tg-theme-secondary);
+            }
+            @media #{$xs} {
+                padding: 25px 20px 30px;
+                border: 15px solid var(--tg-theme-secondary);
+            }
+            & .title {
+                font-size: 30px;
+                font-weight: 500;
+                margin-bottom: 20px;
+                @media #{$xs} {
+                    font-size: 26px;
+                }
+            }
+        }
+        & .form-grp {
+            margin-bottom: 25px;
+            & label {
+                display: block;
+                font-size: 16px;
+                color: var(--tg-heading-color);
+                margin-bottom: 8px;
+            }
+            & textarea,
+            & input {
+                width: 100%;
+                border: none;
+                background: var(--tg-color-gray-3);
+                padding: 15px 20px;
+                font-size: 16px;
+                font-weight: 400;
+                color: var(--tg-heading-color);
+                height: 50px;
+                display: block;
+            }
+            & textarea {
+                min-height: 120px;
+                max-height: 120px;
+            }
+            &.select-grp {
+                width: 100%;
+                position: relative;
+                & select {
+                    background-color: var(--tg-color-gray-3);
+                    border: none;
+                    color: var(--tg-body-color);
+                    font-weight: 400;
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    border-radius: 0;
+                    outline: none;
+                    padding: 15px 40px 15px 20px;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    width: 100%;
+                    line-height: 1.2;
+                    height: 50px;
+                    cursor: pointer;
+                }
+                &::after {
+                    content: "\f078";
+                    position: absolute;
+                    bottom: 10px;
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 700;
+                    right: 15px;
+                    font-size: 15px;
+                    color: var(--tg-body-color);
+                }
+            }
+        }
+        & .btn {
+            padding: 17px 30px 16px;
+            width: 100%;
+            justify-content: center;
+            &:hover {
+                background: var(--tg-theme-secondary);
+                border-color: var(--tg-theme-secondary);
+            }
+        }
+    }
+}
+

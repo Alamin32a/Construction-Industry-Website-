@@ -1,0 +1,181 @@
+@use '../utils' as *;
+
+/*=============================
+        09. Cta
+===============================*/
+.cta {
+    &__area {
+        position: relative;
+        z-index: 1;
+        &-two {
+            padding: 110px 0;
+            @media #{$lg} {
+                padding: 100px 0;
+            }
+            @media #{$xs} {
+                padding: 80px 0;
+            }
+        }
+    }
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: -1;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.7;
+            background: var(--tg-theme-secondary);
+            mix-blend-mode: multiply;
+        }
+        &-two {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(2, 7, 13, 0.53);
+            }
+        }
+    }
+    &__inner-wrap {
+        position: relative;
+        margin: 0 30px;
+        padding: 120px 0;
+        @media #{$xl} {
+            margin: 0 20px;
+        }
+        @media #{$xs} {
+            padding: 100px 0;
+            margin: 0 10px;
+        }
+    }
+    &__content {
+        padding: 130px 0 140px;
+        @media #{$md} {
+            padding: 90px 0 60px;
+            text-align: center;
+        }
+        & .title {
+            margin-bottom: 45px;
+            color: var(--tg-color-white-default);
+            font-size: 72px;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 1.13;
+            @media #{$xl} {
+                font-size: 68px;
+            }
+            @media #{$lg} {
+                font-size: 62px;
+                margin-bottom: 40px;
+            }
+            @media #{$xs} {
+                font-size: 45px;
+                margin-bottom: 30px;
+            }
+            @media #{$sm} {
+                font-size: 50px;
+            }
+            & br {
+                @media #{$md} {
+                    display: none;
+                }
+            }
+        }
+        &-right {
+            background: var(--tg-theme-primary);
+            padding: 44px 50px;
+            @media #{$xl} {
+                padding: 40px 35px;
+            }
+            @media #{$lg} {
+                padding: 30px 25px;
+            }
+            @media #{$md} {
+                text-align: center;
+            }
+            & .title {
+                margin-bottom: 0;
+                color: var(--tg-color-white-default);
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+        &-two {
+            @media #{$md} {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            & .title {
+                margin-bottom: 0;
+                color: var(--tg-color-white-default);
+                font-size: 42px;
+                width: 95%;
+                @media #{$lg} {
+                    font-size: 40px;
+                    width: 100%;
+                }
+                @media #{$xs} {
+                    font-size: 36px;
+                }
+                @media #{$sm} {
+                    font-size: 38px;
+                }
+            }
+        }
+        &-three {
+            @media #{$md} {
+                text-align: center;
+            }
+        }
+    }
+    &__btn {
+        @include flexbox();
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        @media #{$md} {
+            justify-content: center;
+        }
+    }
+    &__shape {
+        & img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            max-width: 454px;
+            @media #{$xl} {
+                max-width: 400px;
+            }
+            @media #{$lg} {
+                max-width: 340px;
+            }
+            @media #{$xs} {
+                max-width: 220px;
+            }
+        }
+    }
+}
